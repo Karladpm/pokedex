@@ -1,0 +1,31 @@
+<div class="container">
+<br>
+    <div class="container" infiniteScroll [infiniteScrollDistance]="2"  (scrolled)="onScroll()">   
+
+        
+        <form [formGroup]="searchPokemon" (ngSubmit)="findPokemon()">
+            
+            <div class="search">                 
+                    <input mat-input formControlName="name" class="btnSearch">
+                <button mat-button class="btnSearch" type="submit">
+                    <i class="material-icons white">search</i>
+                </button>
+                </div>
+       
+        </form>
+        <mat-card>
+
+            <h1 *ngIf="error">No Pokémon Matched Your Search!</h1>
+            <div class="col-md-3 col-xs-12 box-pokemon" *ngFor ="let pokemon of pokemons"  [routerLink]="['/details-pokemon',pokemon.id]"> 
+     
+                <img class="img" src={{pokemon.img}}>
+                <h1  >{{pokemon.name}}</h1>
+                <h1  >{{pokemon.id}}</h1>  
+
+            </div>
+        </mat-card>
+
+      
+</div>
+<ngx-spinner bdOpacity = "0.2" bdColor="" size = "medium" color = "#981E32" type = "ball-clip-rotate" [fullScreen] = "false"></ngx-spinner>
+</div>  

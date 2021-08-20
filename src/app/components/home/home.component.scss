@@ -1,0 +1,29 @@
+.pokemons-grid{
+    display: grid;
+    grid-gap: 16px;
+    border-color: black;
+}
+
+.img{
+    width: 100%;
+    background-color: #deb8872b;
+    cursor: pointer;
+    border: 1px solid rgb(249 171 0 / 20%);
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);  
+}
+.box-pokemon{
+    padding: 1em;
+    display: inline-block;
+
+}
+.search{
+    text-align: center ;
+}
+.btnSearch{
+    border-color: #ffc889;
+    border-radius: 15px;    
+    border-width: 1px;
+}
+.white  {
+    color: #5a3000;
+}

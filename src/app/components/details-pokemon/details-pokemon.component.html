@@ -1,0 +1,30 @@
+<div class="container">
+
+    <mat-card>
+            <div class="row">
+                <div class=" col-12 title">{{namePokemon}} {{idPokemon}}</div> 
+
+            <div class="col-md-6 col-xs-12 details-name"> 
+
+                <img class="img" src={{picture}}>
+
+                
+
+
+            </div>
+            <div class="col-md-6 col-xs-12 details"> 
+    
+                <div class="details-box">Height: {{heightPokemon}}</div> 
+            
+                <div class="details-box">Weight: {{weightPokemon}}</div> 
+            
+                <div class="details-box">Abilities: {{abilitiesPokemon}}</div> 
+                <div class="details-box">Type:</div>
+                <div class="col-12 details-box"  *ngFor ="let slot of slots">{{slot}}</div>
+            </div>   
+        </div>   
+        
+        </mat-card>
+
+      
+</div>  
